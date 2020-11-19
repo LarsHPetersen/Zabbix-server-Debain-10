@@ -57,8 +57,8 @@ su - postgres
 # Create a database user called zabbix
 sudo -u postgres createuser --pwprompt zabbix
 
-# Create a database called Zabbix and give ownership to the zabbix user created before
-sudo -u postgres createdb -O zabbix zabbix
+# Create a database with UTF8 called Zabbix and give ownership to the zabbix user created before
+sudo -u postgres createdb -O zabbix -E Unicode -T template0 zabbix
 ```
 
 ### 9. import initial schema and data to the database.
